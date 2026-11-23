@@ -121,4 +121,3 @@ function excluirGasto(indice) {
 // Exibe os gastos ao abrir a página
 atualizarLista();
 
-console.log(gastos);
