@@ -121,3 +121,15 @@ function excluirGasto(indice) {
 // Exibe os gastos ao abrir a página
 atualizarLista();
 
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+        navigator.serviceWorker.register("./service-worker.js")
+            .then(function() {
+                console.log("Service Worker registrado com sucesso!");
+            })
+            .catch(function(erro) {
+                console.error("Erro ao registrar Service Worker:", erro);
+            });
+    });
+}
+
